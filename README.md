@@ -27,7 +27,7 @@ VSAT = 125000
 U0 = 0.025  
 DVTSHIFT = 0.01  
 
-## Results
+## test.py Results
 Id =  3.592760184e-04 A  
 Ig =  0.000000000e+00 A  
 Is = -3.592760184e-04 A  
@@ -47,13 +47,7 @@ This is a simple extension to the existing work by Huan Lin that takes advantage
 
 The operating point voltages must be removed from the model card and passed in as tensorflow variables.  The code in `bsimcmg.py` is unchanged. 
 
-~~~latex
-```math
-g_m = \frac{\partial I_d}{\partial v_g}
-```
-~~~
-
-is used as an example, but all 16 derivitives combining each device current with each terminal voltage can be retrieved in this way.
+gm = Id/vg is used as an example in , but all 16 derivitives combining each device current with each terminal voltage can be retrieved in this way.
 
 ## Example modelcard_without_op.l
 
@@ -64,7 +58,7 @@ VSAT = 125000
 U0 = 0.025  
 DVTSHIFT = 0.01  
 
-## Results
+## test_gradients.py Results
 
 Id =  3.592760184e-04 A  
 Ig =  0.000000000e+00 A  
