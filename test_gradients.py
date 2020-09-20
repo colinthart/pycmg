@@ -27,7 +27,7 @@ param['vs'] = vs
 param['vb'] = vb
 
 # Newton iteration on DC model requires gradients.  
-# Use tf autograd to get these for free
+# Use tf autodiff to get these for free
 with tf.GradientTape() as tape:
 	Id, Ig, Is, Ib = BSIMCMG(**param).calc()
 
